@@ -1,0 +1,29 @@
+<p>author works!</p>
+
+<table>
+    <tr>
+        <td>Author Name</td>
+        <td>
+            <input type="text" [(ngModel)]="author.authorName"     (ngModelChange)="onFieldChange('authorName')"> 
+            <span>
+                {{ error3["authorName"] || '' }}
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <button (click)="SaveAuthor()">Save</button>
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>Author ID</td>
+        <td>Author Name</td>
+    </tr>
+    <tr *ngFor="let a of authors">
+        <td>{{ a.authorId}}</td>
+        <td>{{ a.authorName}}</td>
+    </tr>
+</table>
